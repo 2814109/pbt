@@ -1,10 +1,17 @@
-pbt
-=====
+# Command
+
+## create new test
+
+```
+rebar3 new proper {testName}
+```
+
+# pbt
 
 An OTP library
 
-Build
------
+## Build
 
     $ rebar3 compile
+
 # pbt
