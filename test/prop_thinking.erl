@@ -10,3 +10,10 @@ prop_test() ->
             KnownList = List ++ [KnownLast],
             KnownLast =:= lists:last(KnownList)
         end).
+
+prop_symmetric() ->
+        ?FORALL(Data , list({atom(),any()}),
+        begin
+            Encoded = encode(Data), is_binary(Encoded) andalso
+            Data =:= decode(Encoded)
+end).
